@@ -9,4 +9,4 @@ Designing an AI bot tailored to the local context to provide crop recommendation
 
 ## Solution
 
-Developing a user-friendly web application utilizing OpenAI's Language Model (LLM) to provide straightforward and accessible crop recommendations based on inputs such as altitude, crop type, maturity days, and current market prices.
+Developing a user-friendly web application utilizing Claude AI to provide straightforward and accessible crop recommendations based on inputs such as altitude, crop type, maturity days, and current market prices.
