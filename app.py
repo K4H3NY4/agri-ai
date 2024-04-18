@@ -27,6 +27,7 @@ if prompt:  # Check if prompt is not empty
         }
     ],
     model="mixtral-8x7b-32768",
+    temperature=0.1,
 )
 
     # Display the generated response
