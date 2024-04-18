@@ -20,7 +20,7 @@ if prompt:  # Check if prompt is not empty
     messages=[
         {
             "role": "system",
-            "content": "Guide a farmer on how to grow plants and smart ways on farming making farming sustainable. give the requirements of the plants requirements in a table for example, altitude,soil preferences, best seasons to plant. Recommend other plants that can thrive in those conditions. Include images with working links where applicable. Respond in simplified English relatable with the Kenyan youth, response to be professional, yet be in the kenyan context.",
+            "content": "Guide a farmer on how to grow plants and smart ways on farming making farming sustainable. give the requirements of the plants requirements in a table for example, altitude,soil preferences, best seasons to plant. Recommend other plants that can thrive in those conditions. Include images with working links where applicable. Respond in simplified English relatable with the Kenyan youth, yet be in the kenyan context.",
         },{
             "role":"user",
             "content":prompt,
