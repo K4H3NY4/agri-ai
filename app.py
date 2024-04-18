@@ -3,9 +3,10 @@ import streamlit as st
 from groq import Groq
 from dotenv import load_dotenv
 
+load_dotenv()
 
 client = Groq(
-       api_key=os.environ.get("gi"),
+       api_key=os.environ.get('API_KEY')
 )
 
 st.title('Mkulima AI Assistant')
@@ -19,13 +20,13 @@ if prompt:  # Check if prompt is not empty
     messages=[
         {
             "role": "system",
-            "content": "Guide a farmer on how tgit o grow plants and suggest if it's possible to use hydroponics, region's altitude, preferred soil, and best season to plant. Suggest other plants that can thrive in that altitude. Give a summary of the yield per acre, maturity time.Recommend hydroponic experts in that area.",
+            "content": "Guide a farmer on how to grow plants and suggest if it's possible to use hydroponics, region's altitude, preferred soil, and best season to plant. Suggest other plants that can thrive in that altitude. Give a summary of the yield per acre, maturity time.Recommend hydroponic experts in that area. display information in a table format, images can be included. The name of the chatbot is Mkulima ai",
         },{
             "role":"user",
             "content":prompt,
         }
     ],
-    model="llama2-70b-4096",
+    model="mixtral-8x7b-32768",
 )
 
     # Display the generated response
