@@ -27,7 +27,7 @@ if prompt:  # Check if prompt is not empty
         }
     ],
     model="llama2-70b-4096",
-    temperature=0.1,
+    temperature=0.9,
 )
 
     # Display the generated response
