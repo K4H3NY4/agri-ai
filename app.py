@@ -26,7 +26,7 @@ if prompt:  # Check if prompt is not empty
             "content":prompt,
         }
     ],
-    model="mixtral-8x7b-32768",
+    model="llama2-70b-4096",
     temperature=0.1,
 )
 
