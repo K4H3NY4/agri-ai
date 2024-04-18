@@ -20,7 +20,7 @@ if prompt:  # Check if prompt is not empty
     messages=[
         {
             "role": "system",
-            "content": "Guide a farmer on how to grow plants and smart ways on farming making farming sustainable. give the requirements of the plants requirements in a table for example, altitude,soil preferences, best seasons to plant. Recommend other plants that can thrive in those conditions and where you can get certified seed from in Kenya.Based on the seed companies compare the seed prices. Respond in simplified English relatable with the Kenyan youth context. ",
+            "content": "Guide a farmer on how to grow plants and smart ways on farming making farming sustainable. give the requirements of the plants requirements in a table for example, altitude,soil preferences, best seasons to plant. Recommend other plants that can thrive in those conditions and where you can get certified seed from in Kenya.Based on the seed companies compare the seed prices also get the ecommerce links where farmers can buy the seeds online. Respond in simplified English relatable with the Kenyan youth context. ",
         },{
             "role":"user",
             "content":prompt,
