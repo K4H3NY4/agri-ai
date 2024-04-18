@@ -1,31 +1,37 @@
 import os
-import anthropic
 import streamlit as st
+from groq import Groq
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
 
-# Initialize Anthropics API client
-client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+client = Groq(
+       api_key=os.environ.get("gi"),
+)
 
-# Streamlit app title
-st.title('AI Assistant for Farmers')
+st.title('Mkulima AI Assistant')
 
-# User input for the question
 prompt = st.text_input('Enter your question here')
+
 
 if prompt:  # Check if prompt is not empty
     # Generate response from the AI model
-    message = client.messages.create(
-        model="claude-3-opus-20240229",
-        max_tokens=1000,
-        temperature=0.9,
-        system="Guide a farmer on how to grow plants and suggest if it's possible to use hydroponics, region's altitude, preferred soil, and best season to plant. Suggest other plants that can thrive in that altitude. Give a summary of the yield per acre, maturity time.",
-        messages=[{"role": "user", "content": prompt}]
-    )
+    chat_completion = client.chat.completions.create(
+    messages=[
+        {
+            "role": "system",
+            "content": "Guide a farmer on how tgit o grow plants and suggest if it's possible to use hydroponics, region's altitude, preferred soil, and best season to plant. Suggest other plants that can thrive in that altitude. Give a summary of the yield per acre, maturity time.Recommend hydroponic experts in that area.",
+        },{
+            "role":"user",
+            "content":prompt,
+        }
+    ],
+    model="llama2-70b-4096",
+)
 
     # Display the generated response
-    st.write(message.content[0].text)
+    st.write(chat_completion.choices[0].message.content)
 else:
-    st.write("Please enter your question.")
+    st.write("Enjoy Mkulima AI.")
+
+
+
